@@ -1,0 +1,553 @@
+// Set your brand colors
+$graydark: #5d5d5d;
+$graylight: #bababa;
+$blue: #105fa8;
+$bluedark: #003a70;
+$tealdark: #03746e;
+$sand: #fffbf2;
+$gold: #f5b93c;
+$graydarker: #444444;
+$beige-lighter: #eff0eb;
+$graydarkest: #222222;
+$gray: #838383;
+$grayligher: #e5e5e5;
+$graylightest: #f7f7f7;
+$bkgrd-white: #fff;
+$bkgrd-graylightest: #f7f7f7;
+$bkgrd-sand: #fffbf2;
+$bkgrd-tealdark: #03746e;
+$bkgrd-blue: #105fa8;
+$family-primary: '"Source Sans", sans-serif';
+$navbar-item-img-max-height: 90px;
+
+// Map for color usage
+$colors: (
+  gray-dark: $graydark,
+  gray-light: $graylight,
+  blue: $blue,
+  blue-dark: $bluedark,
+  teal-dark: $tealdark,
+  sand: $sand,
+  gold: $gold,
+  gray-darker: $graydarker,
+  beige-lighter: $beige-lighter,
+  gray-darkest: $graydarkest,
+  gray: $gray,
+  gray-ligher: $grayligher,
+  gray-lightest: $graylightest,
+);
+
+// Mixin for flex
+@mixin flex-center($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// Mixin for borders
+@mixin border($color, $width: 1px, $style: solid) {
+  border: $width $style $color;
+}
+
+// Mixin for rounded corners
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+}
+
+// Mixin for responsive table
+@mixin responsive-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.75rem;
+
+  th,
+  td {
+    padding: 0.5rem;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+
+  @media (min-width: 48rem) {
+    font-size: 0.875rem;
+    th,
+    td {
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    font-size: 1rem;
+    th,
+    td {
+      padding: 1.5rem 1rem;
+    }
+  }
+}
+
+// Apply Bulma styles
+@import "node_modules/bulma/bulma";
+
+// Root variable
+:root {
+  --roundedFull: 50em;
+  --bluedark: $bluedark;
+}
+
+// Apply styles
+.borderBlue {
+  @include border($bluedark);
+  font-weight: 700;
+  color: var(--bluedark);
+}
+
+.roundedFull {
+  @include rounded(50em);
+}
+
+.entry-header {
+  padding: 2.5rem;
+  background: $bluedark;
+  color: $bkgrd-white;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  p,
+  .navbar-item {
+    font-size: 18px;
+  }
+
+  p {
+    font-weight: 400;
+  }
+
+  .navbar-item {
+    font-weight: 600;
+  }
+
+  .container {
+    @include flex-center(space-between);
+  }
+}
+
+.navbar-dropdown {
+  background-color: $grayligher;
+  @include rounded;
+  a {
+    color: $graydarker;
+
+    &.navbar-item {
+      color: $graydarker;
+    }
+  }
+}
+
+.navbar-brand .navbar-item svg {
+  max-height: $navbar-item-img-max-height;
+}
+
+.top-nav {
+  padding: 1rem;
+}
+
+.navbar-item img {
+  max-height: 48px;
+}
+
+.sidebar-item {
+  @include border($graydarker);
+  @include rounded;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  .button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  a {
+    text-align: center;
+    margin: 10px auto;
+    display: table;
+  }
+}
+
+h3 {
+  color: $graydark;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 5px;
+
+  &.tealDark {
+    color: $tealdark;
+  }
+
+  &.h3-xl {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  color: $graydarker;
+  font-weight: 700;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.centerText {
+  text-align: center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-area,
+.sidebar-area {
+  flex: 1;
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.cta {
+  display: block;
+  margin: 20px auto;
+  align-items: center;
+
+  a {
+    display: table;
+    margin: 20px auto 0;
+  }
+}
+
+.realtor {
+  @include flex-center;
+  padding: 20px;
+  font-size: 14px;
+  gap: 10px;
+
+  img {
+    width: 40px;
+  }
+}
+
+.bkggray {
+  background-color: $graylightest;
+}
+.bkgwhite {
+  background-color: $bkgrd-white;
+}
+.myHome {
+  background-color: $bluedark;
+  color: $bkgrd-white;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  @include rounded(3px);
+}
+
+.moreInfo {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.confidence {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.flex {
+  @include flex-center(space-between);
+}
+
+.edit {
+  background-color: $grayligher;
+  color: $graydarker;
+}
+
+.button {
+  white-space: normal; /* Allows the text to wrap */
+  word-wrap: break-word; /* Breaks long words */
+  overflow: hidden; /* Prevents overflowing */
+  display: inline-block; /* Ensures button respects its container's width */
+
+  &.moom {
+    background-color: $bluedark;
+    color: $bkgrd-white;
+  }
+}
+
+.p-15 {
+  padding: 0 15px;
+}
+
+.p-30 {
+  padding: 0 30px;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.graydarker {
+  color: $graydarker;
+}
+
+.blueDark {
+  color: $bluedark;
+}
+
+.blue {
+  color: $blue;
+}
+
+.gold {
+  color: $gold;
+}
+
+.bullet {
+  margin-right: 10px;
+}
+
+.container table {
+  margin: 30px 0;
+  border-collapse: separate;
+}
+
+.table {
+  tr:first-of-type {
+    th {
+      border-top-left-radius: 9px;
+    }
+    & td:last-of-type {
+      border-top-right-radius: 9px;
+    }
+  }
+  tr:last-of-type {
+    th {
+      border-bottom-left-radius: 9px;
+    }
+    & td:last-of-type {
+      border-bottom-right-radius: 9px;
+    }
+  }
+}
+
+.is-centered {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.is-small {
+  font-size: 10px;
+}
+
+.sidebar-icon {
+  display: table;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  margin: 20px 0;
+}
+
+// Tables
+.comparison-table {
+  @include responsive-table;
+
+  th:nth-child(2n) {
+    box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15);
+  }
+
+  th:nth-child(2n),
+  td:nth-child(2n) {
+    position: relative;
+    background: #ddd;
+  }
+
+  td:not(:first-child) {
+    text-align: center;
+  }
+}
+
+// Mobile Menu
+.navbar-menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.is-active {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s forwards ease-in-out;
+  }
+
+  .navbar-end {
+    align-items: center;
+    &.is-active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .navbar-item {
+    display: inline-block;
+    margin-right: 1rem; /* Add some spacing between items */
+  }
+
+  /* Hide the items after the first three by default on larger screens */
+  .navbar-item:nth-child(n + 4) {
+    display: none;
+  }
+
+  /* Media query for small screens */
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+
+    /* Hide all navbar items by default on small screens */
+    .navbar-item {
+      display: none;
+    }
+
+    /* Show all items when the navbar-burger is active */
+    &.is-active {
+      .navbar-item {
+        display: block;
+        width: 100%; /* Ensure full width for centering */
+        text-align: center;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 0.6s forwards ease-in-out;
+      }
+
+      /* Show the first two items side by side */
+      .navbar-item:nth-child(1),
+      .navbar-item:nth-child(2) {
+        width: auto; /* Allow them to be side by side */
+        margin-right: 0rem;
+        text-align: center; /* Align text to the left */
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Create a flex container for the first two items to center them */
+      .navbar-menu.is-active .navbar-item:nth-child(1)::after,
+      .navbar-menu.is-active .navbar-item:nth-child(2)::after {
+        content: "";
+        display: inline-block;
+        width: 50%; /* Ensure equal space to center */
+      }
+      .navbar-menu.is-active .navbar-item:nth-child(1)::before,
+      .navbar-menu.is-active .navbar-item:nth-child(2)::before {
+        content: "";
+        display: inline-block;
+        width: 50%;
+      }
+      /* Center the first two items together */
+      .navbar-menu.is-active .navbar-item:first-of-type {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      /* Center and stack items from the third onwards */
+      .navbar-item:nth-child(n + 3) {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Keyframes for the fadeIn animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* General visibility for .navbar-two */
+.navbar-two {
+  display: none; /* Hide by default */
+}
+.navbar-two .navbar-dropdown.is-boxed a {
+  color: $graydarker;
+}
+
+/* Media query for large screens */
+@media screen and (min-width: 1025px) {
+  .navbar-two {
+    display: flex; /* Show .navbar-two on large screens */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+}
+// fix dropdown
+
+/* General styles for .navbar-dropdown */
+.navbar-dropdown {
+  background-color: #e5e5e5;
+  @include rounded(6px); /* Rounded corners */
+  min-width: 200px; /* Minimum width for dropdown */
+  position: absolute; /* Absolute positioning */
+  z-index: 1000; /* Ensure it appears above other elements */
+  margin-top: 0.5rem; /* Space between the parent and the dropdown */
+}
+
+/* Ensure .navbar-dropdown stays within the viewport */
+.navbar-item.has-dropdown:hover .navbar-dropdown,
+.navbar-item.has-dropdown.is-hoverable .navbar-dropdown {
+  left: auto; /* Reset left alignment */
+  right: auto; /* Reset right alignment */
+  transform: translateX(0); /* Reset horizontal translation */
+}
+
+.navbar-item.has-dropdown.is-hoverable {
+  position: relative; /* Create a containing block for absolute positioning */
+}
+
+/* Check if .navbar-dropdown is going off-screen and adjust */
+.navbar-item.has-dropdown.is-hoverable .navbar-dropdown {
+  @media screen and (max-width: 1024px) {
+    left: 50%; /* Center align on small screens */
+    transform: translateX(-50%); /* Center it relative to the parent */
+  }
+}
+
+/* When .navbar-dropdown is active and near the right edge, adjust its position */
+.navbar-dropdown.is-boxed {
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1025px) {
+  .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown {
+    /* Adjust to prevent overflow on larger screens */
+    right: auto; /* Reset right alignment */
+    left: auto; /* Reset left alignment */
+    transform: translateX(-50%);
+  }
+}

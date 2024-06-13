@@ -1,0 +1,103 @@
+// Set your brand colors
+
+$graydark: #5d5d5d;
+$graylight: #bababa;
+$blue: #105fa8;
+$bluedark: #003a70;
+
+$tealdark: #03746e;
+// Supporting palette
+$sand: #fffbf2;
+$gold: #f5b93c;
+$graydarker: #444444;
+$beige-lighter: #eff0eb;
+
+// Gray palette
+$graydarkest: #222222;
+$graydark: #5d5d5d;
+$gray: #838383;
+$graylight: #bababa;
+$grayligher: #e5e5e5;
+$graylightest: #f7f7f7;
+
+// Background colors:
+$bkgrd-white: #fff;
+$bkgrd-graylightest: #f7f7f7;
+$bkgrd-sand: #fffbf2;
+$bkgrd-tealdark: #03746e;
+$bkgrd-blue: #105fa8;
+
+@use "bulma/sass" with (
+  // Primary palette
+  $blue: #105fa8,
+  $white: #ffffff,
+
+  // Path to Bulma's sass folder
+  $family-primary: '"Source Sans", sans-serif',
+  $grey-dark: $graydark,
+  $grey-light: $graylight,
+  $primary: $blue,
+  $link: $blue,
+  $control-border-width: 1px,
+  $input-shadow: none,
+  $navbar-item-img-max-height: 90px
+);
+
+// Import the components you need
+@forward "bulma/sass/base";
+@forward "bulma/sass/components/card";
+@forward "bulma/sass/components/modal";
+@forward "bulma/sass/components/navbar";
+@forward "bulma/sass/elements/button";
+@forward "bulma/sass/elements/icon";
+@forward "bulma/sass/elements/content";
+@forward "bulma/sass/elements/notification";
+@forward "bulma/sass/elements/progress";
+@forward "bulma/sass/elements/tag";
+@forward "bulma/sass/layout/footer";
+
+// Import the themes so that all CSS variables have a value
+@forward "bulma/sass/themes";
+
+:root {
+  $--roundedFull: 50em;
+  $bluedark: #003a70;
+}
+.borderBlue {
+  border: 1px solid #003a70;
+  font-weight: 700;
+  color: var(--bluedark);
+}
+
+.roundedFull {
+  border-radius: 50em;
+}
+.entry-header {
+  padding: 2.5rem;
+  background: #003a70;
+  color: #fff;
+}
+.entry-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+.entry-header p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.entry-header .navbar-item {
+  font-size: 18px;
+  font-weight: 600;
+}
+.entry-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-dropdown {
+  background-color: #e5e5e5;
+  border-radius: 6px;
+}
+.navbar-dropdown > a {
+  color: #444;
+}
