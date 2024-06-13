@@ -23403,7 +23403,7 @@ h3.tealDark {
   color: #03746e;
 }
 h3.h3-xl {
-  font-size: 32px;
+  font-size: 26px;
 }
 
 h4 {
@@ -23546,16 +23546,23 @@ h4 {
   border-collapse: separate;
 }
 
-.table tr:first-of-type th {
+.comparison-table,
+.comparison-table tr:first-of-type th:first-of-type {
   border-top-left-radius: 9px;
 }
-.table tr:first-of-type td:last-of-type {
+
+.comparison-table,
+.comparison-table tr:first-of-type th:last-of-type {
   border-top-right-radius: 9px;
 }
-.table tr:last-of-type th {
+
+.comparison-table,
+.comparison-table tr:last-of-type td:first-of-type {
   border-bottom-left-radius: 9px;
 }
-.table tr:last-of-type td:last-of-type {
+
+.comparison-table,
+.comparison-table tr:last-of-type td:last-of-type {
   border-bottom-right-radius: 9px;
 }
 
@@ -23731,50 +23738,95 @@ h4 {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
   }
+  .entry-title p {
+    max-width: 75%;
+  }
 }
-/* General styles for .navbar-dropdown */
-.navbar-dropdown {
+/* General styles for .navbar-dropdown-menu */
+/* Show dropdown when it has the .is-active class */
+.navbar-dropdown-menu.is-active {
+  display: block; /* Display dropdown when active */
+}
+
+/* Highlight dropdown item on hover or focus */
+.navbar-dropdown-menu a.navbar-item {
+  padding: 10px;
+}
+.navbar-dropdown-menu a.navbar-item:hover, .navbar-dropdown-menu a.navbar-item:focus {
+  background-color: #363636; /* dark gray (graydarker) */
+  color: #fff; /* white text */
+  outline: none; /* Remove default outline */
+}
+
+.relativeDropdown {
+  position: relative;
+}
+
+/* Styles for .dropdownButton to maintain its size and prevent text wrapping */
+.dropdownButton {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: none;
+  display: inline-block; /* Ensure it behaves like a button */
+  padding: 0.5rem 1rem; /* Add some padding for button look */
+  font-size: 1rem; /* Ensure consistent font size */
+  height: auto; /* Allow the button to adjust height based on content */
+  min-width: 150px; /* Set a minimum width to prevent wrapping */
+  max-width: 200px; /* Optional: set a maximum width to constrain button size */
+  vertical-align: middle; /* Align button vertically in line with text */
+  text-align: center; /* Center the text within the button */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border: 1px solid #ddd; /* Add a border to match button styling */
+  border-radius: 6px; /* Match the rounded corners style */
+}
+
+/* Make sure the button remains consistent across different screen sizes */
+@media screen and (max-width: 1024px) {
+  .dropdownButton {
+    min-width: 100px; /* Adjust minimum width for smaller screens */
+  }
+}
+/* Ensure the dropdown-menu aligns properly with the button */
+.navbar-dropdown-menu {
+  left: 0; /* Align with the left edge of the button */
+  top: 100%; /* Position below the button */
+}
+
+/* General styles for .navbar-dropdown-menu */
+.navbar-dropdown-menu {
   background-color: #e5e5e5;
-  border-radius: 6px;
-  /* Rounded corners */
-  min-width: 200px; /* Minimum width for dropdown */
+  border-radius: 6px; /* Rounded corners */
+  min-width: auto; /* No minimum width constraint */
+  max-width: 200px; /* Optional: Set a maximum width for the dropdown */
   position: absolute; /* Absolute positioning */
   z-index: 1000; /* Ensure it appears above other elements */
-  margin-top: 0.5rem; /* Space between the parent and the dropdown */
+  margin-top: 0.5rem; /* Space between the button and the dropdown */
+  display: none; /* Initially hide the dropdown */
+  left: 0; /* Align with the left of the parent */
+  top: 100%; /* Position below the button */
+  transform: translateX(0); /* No horizontal shift */
+  width: auto; /* Automatically adjust to content width */
 }
 
-/* Ensure .navbar-dropdown stays within the viewport */
-.navbar-item.has-dropdown:hover .navbar-dropdown,
-.navbar-item.has-dropdown.is-hoverable .navbar-dropdown {
-  left: auto; /* Reset left alignment */
-  right: auto; /* Reset right alignment */
-  transform: translateX(0); /* Reset horizontal translation */
+/* Show dropdown when it has the .is-active class */
+.navbar-dropdown-menu.is-active {
+  /* Display dropdown when active */
 }
 
-.navbar-item.has-dropdown.is-hoverable {
-  position: relative; /* Create a containing block for absolute positioning */
+/* Highlight dropdown item on hover or focus */
+.navbar-dropdown-menu a.navbar-item {
+  padding: 10px;
+  color: #444;
+}
+.navbar-dropdown-menu a.navbar-item:hover, .navbar-dropdown-menu a.navbar-item:focus {
+  background-color: hsl(221, 14%, 95%);
+  outline: none; /* Remove default outline */
+  color: #444;
 }
 
-/* Check if .navbar-dropdown is going off-screen and adjust */
-@media screen and (max-width: 1024px) {
-  .navbar-item.has-dropdown.is-hoverable .navbar-dropdown {
-    left: 50%; /* Center align on small screens */
-    transform: translateX(-50%); /* Center it relative to the parent */
-  }
-}
-
-/* When .navbar-dropdown is active and near the right edge, adjust its position */
-.navbar-dropdown.is-boxed {
-  transition: all 0.3s ease-in-out;
-}
-
-@media screen and (min-width: 1025px) {
-  .navbar-item.has-dropdown.is-hoverable:hover .navbar-dropdown {
-    /* Adjust to prevent overflow on larger screens */
-    right: auto; /* Reset right alignment */
-    left: auto; /* Reset left alignment */
-    transform: translateX(-50%);
-  }
+.footer-widgets .sidebar-item p {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
