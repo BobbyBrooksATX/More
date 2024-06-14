@@ -99,6 +99,9 @@ $colors: (
 }
 
 // Apply styles
+body {
+  background-color: #fff;
+}
 .borderBlue {
   @include border($bluedark);
   font-weight: 700;
@@ -182,7 +185,9 @@ $colors: (
     display: table;
   }
 }
-
+.button.white {
+  background-color: #fff;
+}
 h3 {
   color: $graydark;
   font-size: 19px;
