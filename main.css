@@ -23400,12 +23400,18 @@ body {
   background-color: #fff;
 }
 
+h2 {
+  color: #444444;
+  font-weight: bold;
+  font-size: 28px;
+}
+
 h3 {
   color: #5d5d5d;
   font-size: 19px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 h3.tealDark {
   color: #03746e;
@@ -23475,7 +23481,8 @@ h4 {
 .myHome {
   background-color: #003a70;
   color: #fff;
-  padding: 10px;
+  padding: 12px 20px;
+  font-weight: bold;
   margin-bottom: 20px;
   display: inline-block;
   border-radius: 3px;
@@ -23513,8 +23520,11 @@ h4 {
   display: inline-block; /* Ensures button respects its container's width */
 }
 .button.moom {
-  background-color: #003a70;
+  background-color: #105fa8;
   color: #fff;
+}
+.button.moom:hover {
+  background-color: #003a70;
 }
 
 .p-15 {
@@ -23580,7 +23590,7 @@ h4 {
 }
 
 .is-small {
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .sidebar-icon {
@@ -23626,7 +23636,7 @@ h4 {
   }
 }
 .comparison-table th:nth-child(2n) {
-  box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15);
+  /* box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15); */
 }
 .comparison-table th:nth-child(2n),
 .comparison-table td:nth-child(2n) {
@@ -23659,7 +23669,6 @@ h4 {
 }
 .navbar-menu .navbar-item {
   display: inline-block;
-  margin-right: 1rem; /* Add some spacing between items */
 }
 .navbar-menu .navbar-item:nth-child(n+4) {
   display: none;
