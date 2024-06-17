@@ -23319,9 +23319,10 @@ body {
 }
 
 .borderBlue {
-  border: 1px solid #003a70;
+  border: 1px solid #105fa8;
   font-weight: 700;
-  color: var(--bluedark);
+  color: #105fa8;
+  border: 2px solid #105fa8;
 }
 
 .roundedFull {
@@ -23400,7 +23401,12 @@ body {
   background-color: #fff;
 }
 
-h2 {
+.textBlue,
+a.textBlue {
+  color: #105fa8;
+}
+
+.borderBlue h2 {
   color: #444444;
   font-weight: bold;
   font-size: 28px;
@@ -23455,6 +23461,7 @@ h4 {
 .cta a {
   display: table;
   margin: 20px auto 0;
+  padding: 7px 15px;
 }
 
 .realtor {
@@ -23844,6 +23851,11 @@ h4 {
 
 .footer-widgets .sidebar-item p {
   font-size: 14px;
+  min-height: 44px;
+}
+
+.footer-widgets .sidebar-item h3 {
+  min-height: 58px;
 }
 
 /*# sourceMappingURL=main.css.map */

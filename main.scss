@@ -103,9 +103,10 @@ body {
   background-color: #fff;
 }
 .borderBlue {
-  @include border($bluedark);
+  @include border($blue);
   font-weight: 700;
-  color: var(--bluedark);
+  color: $blue;
+  border: 2px solid $blue;
 }
 
 .roundedFull {
@@ -188,7 +189,11 @@ body {
 .button.white {
   background-color: #fff;
 }
-h2 {
+.textBlue,
+a.textBlue {
+  color: $blue;
+}
+.borderBlue h2 {
   color: $graydarker;
   font-weight: bold;
   font-size: 28px;
@@ -245,6 +250,7 @@ h4 {
   a {
     display: table;
     margin: 20px auto 0;
+    padding: 7px 15px;
   }
 }
 
@@ -611,4 +617,8 @@ h4 {
 }
 .footer-widgets .sidebar-item p {
   font-size: 14px;
+  min-height: 44px;
+}
+.footer-widgets .sidebar-item h3 {
+  min-height: 58px;
 }
