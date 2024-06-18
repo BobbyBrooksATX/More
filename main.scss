@@ -184,6 +184,7 @@ body {
     text-align: center;
     margin: 10px auto;
     display: table;
+    text-decoration: underline;
   }
 }
 .button.white {
@@ -252,6 +253,10 @@ h4 {
     margin: 20px auto 0;
     padding: 7px 15px;
   }
+}
+
+.tel {
+  text-decoration: underline;
 }
 
 .realtor {
@@ -350,7 +355,9 @@ h4 {
 .bullet {
   margin-right: 10px;
 }
-
+.breakdown {
+  font-size: 14px;
+}
 .container table {
   margin: 30px 0;
   border-collapse: separate;
@@ -557,10 +564,9 @@ h4 {
   overflow: hidden; /* Hide any overflow text */
   text-overflow: none;
   display: inline-block; /* Ensure it behaves like a button */
-  padding: 0.5rem 1rem; /* Add some padding for button look */
+  padding: 0.5rem 0.75rem; /* Add some padding for button look */
   font-size: 1rem; /* Ensure consistent font size */
   height: auto; /* Allow the button to adjust height based on content */
-  min-width: 150px; /* Set a minimum width to prevent wrapping */
   max-width: 200px; /* Optional: set a maximum width to constrain button size */
   vertical-align: middle; /* Align button vertically in line with text */
   text-align: center; /* Center the text within the button */
