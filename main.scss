@@ -184,7 +184,6 @@ body {
     text-align: center;
     margin: 10px auto;
     display: table;
-    text-decoration: underline;
   }
 }
 .button.white {
@@ -215,12 +214,45 @@ h3 {
     font-size: 26px;
   }
 }
+.sidebar-area h3 {
+  font-weight: bold;
+}
 
 h4 {
   color: $graydarker;
   font-weight: 700;
   margin: 10px 0;
   font-size: 14px;
+}
+
+h5 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+// lists
+
+ul.moom-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styles for each list item */
+ul.moom-bullets li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+ul.moom-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Center the bullet vertically */
+  font-size: 1.5em;
+  color: $blue;
 }
 
 .centerText {
@@ -627,4 +659,22 @@ h4 {
 }
 .footer-widgets .sidebar-item h3 {
   min-height: 58px;
+}
+
+// Accordions
+.accordion-trigger {
+  color: $bluedark;
+  font-weight: bold;
+}
+.accordion {
+  display: none;
+}
+.accordion.active {
+  display: block;
+}
+
+.flexbox-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

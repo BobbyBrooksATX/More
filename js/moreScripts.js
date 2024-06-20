@@ -109,3 +109,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the button with the class 'accordion-trigger' and the accordion div
+  const button = document.querySelector(".accordion-trigger");
+  const accordion = document.querySelector(".accordion");
+
+  // Set initial ARIA attributes
+  button.setAttribute("aria-expanded", "false");
+  accordion.setAttribute("aria-hidden", "true");
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function () {
+    // Toggle the class to show or hide the accordion content
+    accordion.classList.toggle("active");
+
+    // Check if the accordion content is currently visible
+    const isVisible = accordion.classList.contains("active");
+
+    // Update ARIA attributes for accessibility
+    button.setAttribute("aria-expanded", isVisible ? "true" : "false");
+    accordion.setAttribute("aria-hidden", isVisible ? "false" : "true");
+  });
+});
