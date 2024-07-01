@@ -132,3 +132,28 @@ document.addEventListener("DOMContentLoaded", function () {
     accordion.setAttribute("aria-hidden", isVisible ? "false" : "true");
   });
 });
+// Range Controls
+document.addEventListener("DOMContentLoaded", () => {
+  const rangeInput = document.getElementById("rangeInput");
+  const valueDisplay = document.getElementById("valueDisplay");
+
+  function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  rangeInput.addEventListener("input", () => {
+    const formattedValue = formatNumberWithCommas(rangeInput.value);
+    valueDisplay.textContent = `$${formattedValue}`;
+  });
+
+  const paymentRangeInput = document.getElementById("paymentRangeInput");
+  const paymentRangeDisplay = document.getElementById("paymentRangeDisplay");
+
+  paymentRangeInput.addEventListener("input", () => {
+    const minValue = parseInt(paymentRangeInput.value);
+    const maxValue = minValue + 2000;
+    const minFormattedValue = formatNumberWithCommas(minValue);
+    const maxFormattedValue = formatNumberWithCommas(maxValue);
+    paymentRangeDisplay.textContent = `$${minFormattedValue} - $${maxFormattedValue}`;
+  });
+});

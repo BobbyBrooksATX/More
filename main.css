@@ -23401,11 +23401,16 @@ body {
   background-color: #fff;
 }
 
+.textWhite {
+  color: #fff;
+}
+
 .textBlue,
 a.textBlue {
   color: #105fa8;
 }
 
+.moomModal h2,
 .borderBlue h2 {
   color: #444444;
   font-weight: bold;
@@ -23440,6 +23445,181 @@ h4 {
 h5 {
   font-weight: bold;
   margin-top: 20px;
+}
+
+.modalDemoBorder {
+  border-top: 10px solid #000;
+  border-bottom: 10px solid #000;
+}
+
+.modalDemoBorder h1 {
+  margin-bottom: 30px;
+}
+
+.splashModal {
+  border-radius: 9px;
+}
+
+.moomModal {
+  padding: 60px 40px;
+  border-radius: 9px;
+}
+
+.moomModal label {
+  font-size: 16px;
+  text-align: center;
+}
+
+.moomModal input {
+  background-color: #fff;
+  margin: 20px auto 10px;
+  border: solid 2px #fff;
+  min-height: 48px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  border-radius: 6px;
+  font-size: 18px;
+  display: block;
+}
+
+.moomModal button {
+  padding: 12px 180px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .moomModal input {
+    width: 100%;
+  }
+  .moomModal button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+.edit .moomModal input {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.editButtonGroup {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.editButtonGroup button {
+  padding: 12px;
+  width: 100%;
+  margin: 10px;
+}
+
+.button.iconButton {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 12px;
+  width: 100%;
+  max-width: 278px;
+}
+
+label.helperText,
+.helperText {
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.moomModal button {
+  display: block;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.value {
+  font-size: 24px;
+  color: #105fa8;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+input[type=range] {
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type=number] {
+  width: 100px;
+  margin: 10px auto;
+  display: block;
+}
+
+::placeholder {
+  color: #444;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.radio-group p {
+  margin: 20px auto;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.radio-group input[type=radio] {
+  display: none;
+}
+
+.radio-group input[type=radio] + label {
+  padding: 12px 60px;
+  border: 2px solid #105fa8;
+  border-radius: 6px;
+  color: #105fa8;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1;
+}
+
+.radio-group input[type=radio]:checked + label {
+  background-color: #105fa8;
+  color: #ffffff;
+}
+
+.radio-group label:hover {
+  background-color: #105fa8;
+  color: #ffffff;
+}
+
+.moomSelect {
+  width: 100%;
+  max-width: 500px;
+  min-height: 48px;
+  border: 2px solid #fff;
+  display: block;
+  border-radius: 6px;
+  margin: 20px auto;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+}
+
+.moomSelect option {
+  text-align: center;
 }
 
 ul.moom-bullets {
@@ -23519,6 +23699,10 @@ ul.moom-bullets li::before {
 
 .bkgwhite {
   background-color: #fff;
+}
+
+.bkgblue {
+  background-color: #003a70;
 }
 
 .myHome {
