@@ -23485,6 +23485,10 @@ h5 {
   display: block;
 }
 
+.edit .moomModal input {
+  margin: 5px auto 20px;
+}
+
 .moomModal button {
   padding: 12px 180px;
   margin-top: 20px;
@@ -23523,12 +23527,13 @@ h5 {
 
 .button.iconButton {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   justify-content: center;
   align-items: center;
   padding: 5px 12px;
   width: 100%;
   max-width: 278px;
+  min-height: 54px;
 }
 
 label.helperText,

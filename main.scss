@@ -271,6 +271,9 @@ h5 {
   font-size: 18px;
   display: block;
 }
+.edit .moomModal input {
+  margin: 5px auto 20px;
+}
 .moomModal button {
   padding: 12px 180px;
   margin-top: 20px;
@@ -312,6 +315,7 @@ h5 {
   padding: 5px 12px;
   width: 100%;
   max-width: 278px;
+  min-height: 54px;
 }
 label.helperText,
 .helperText {
