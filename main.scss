@@ -101,6 +101,10 @@ $colors: (
 // Apply styles
 body {
   background-color: #fff;
+  color: #565656;
+}
+strong {
+  color: #444;
 }
 .borderBlue {
   @include border($blue);
@@ -113,6 +117,33 @@ body {
   @include rounded(50em);
 }
 
+.navbar-dropdown {
+  background-color: $grayligher;
+  @include rounded;
+  a {
+    color: $graydarker;
+
+    &.navbar-item {
+      color: $graydarker;
+    }
+  }
+}
+.navbar-brand {
+  background-color: #fff;
+}
+.navbar-brand .navbar-item svg {
+  max-height: $navbar-item-img-max-height;
+}
+.navbar-end .navbar-item {
+  color: #565656;
+}
+.top-nav {
+  padding: 1rem;
+}
+
+.navbar-item img {
+  max-height: 48px;
+}
 .entry-header {
   padding: 2.5rem;
   background: $bluedark;
@@ -130,41 +161,18 @@ body {
 
   p {
     font-weight: 400;
+    color: #fff;
   }
 
   .navbar-item {
     font-weight: 600;
+    color: #fff;
   }
 
   .container {
     @include flex-center(space-between);
   }
 }
-
-.navbar-dropdown {
-  background-color: $grayligher;
-  @include rounded;
-  a {
-    color: $graydarker;
-
-    &.navbar-item {
-      color: $graydarker;
-    }
-  }
-}
-
-.navbar-brand .navbar-item svg {
-  max-height: $navbar-item-img-max-height;
-}
-
-.top-nav {
-  padding: 1rem;
-}
-
-.navbar-item img {
-  max-height: 48px;
-}
-
 .sidebar-item {
   @include border($graydarker);
   @include rounded;
@@ -178,6 +186,7 @@ body {
 
   p {
     font-size: 14px;
+    color: #5d5d5d;
   }
 
   a {
@@ -202,7 +211,10 @@ a.textBlue {
   font-weight: bold;
   font-size: 28px;
 }
-
+h2,
+h2.title {
+  color: #444;
+}
 h3 {
   color: $graydark;
   font-size: 19px;
@@ -351,6 +363,7 @@ input[type="number"] {
 }
 .radio-group p {
   margin: 20px auto;
+  color: #565656;
 }
 .radio-group label {
   display: inline-block;
@@ -432,7 +445,8 @@ ul.moom-bullets li::before {
   flex: 1;
 
   .title {
-    margin-bottom: 2rem;
+    margin-bottom: 5px;
+    color: #444;
   }
 
   img {
@@ -485,6 +499,7 @@ ul.moom-bullets li::before {
   margin-bottom: 20px;
   display: inline-block;
   @include rounded(3px);
+  font-size: 32px;
 }
 
 .moreInfo {
@@ -562,6 +577,7 @@ ul.moom-bullets li::before {
 .container table {
   margin: 30px 0;
   border-collapse: separate;
+  color: #5d5d5d;
 }
 .comparison-table,
 .comparison-table tr:first-of-type th:first-of-type {
@@ -590,6 +606,7 @@ ul.moom-bullets li::before {
 
 .is-small {
   font-size: 8px;
+  color: #5d5d5d;
 }
 
 .sidebar-icon {
@@ -604,7 +621,9 @@ ul.moom-bullets li::before {
 // Tables
 .comparison-table {
   @include responsive-table;
-
+  th {
+    color: #444;
+  }
   th:nth-child(2n) {
     /* box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15); */
   }
@@ -624,6 +643,7 @@ ul.moom-bullets li::before {
 .navbar-menu {
   display: flex;
   flex-wrap: wrap;
+  background-color: #fff;
 
   &.is-active {
     opacity: 0;
@@ -640,9 +660,9 @@ ul.moom-bullets li::before {
       flex-wrap: wrap;
     }
   }
-
   .navbar-item {
     display: inline-block;
+    background-color: #fff;
   }
 
   /* Hide the items after the first three by default on larger screens */
@@ -724,6 +744,7 @@ ul.moom-bullets li::before {
 }
 .navbar-two .navbar-dropdown.is-boxed a {
   color: $graydarker;
+  font-weight: 600;
 }
 
 /* Media query for large screens */
@@ -759,28 +780,30 @@ ul.moom-bullets li::before {
 .relativeDropdown {
   position: relative;
 }
-/* Styles for .dropdownButton to maintain its size and prevent text wrapping */
+
 .dropdownButton {
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide any overflow text */
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: none;
-  display: inline-block; /* Ensure it behaves like a button */
-  padding: 0.5rem 0.75rem; /* Add some padding for button look */
-  font-size: 1rem; /* Ensure consistent font size */
-  height: auto; /* Allow the button to adjust height based on content */
-  max-width: 200px; /* Optional: set a maximum width to constrain button size */
-  vertical-align: middle; /* Align button vertically in line with text */
-  text-align: center; /* Center the text within the button */
-  box-sizing: border-box; /* Include padding and border in the element's width and height */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  border: 1px solid #ddd; /* Add a border to match button styling */
-  border-radius: 6px; /* Match the rounded corners style */
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  height: auto;
+  max-width: 200px;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 12px;
 }
 
 /* Make sure the button remains consistent across different screen sizes */
 @media screen and (max-width: 1024px) {
   .dropdownButton {
-    min-width: 100px; /* Adjust minimum width for smaller screens */
+    min-width: 100px;
   }
 }
 
@@ -825,6 +848,7 @@ ul.moom-bullets li::before {
 .footer-widgets .sidebar-item p {
   font-size: 14px;
   min-height: 44px;
+  color: #5d5d5d;
 }
 .footer-widgets .sidebar-item h3 {
   min-height: 58px;

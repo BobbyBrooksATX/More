@@ -23316,6 +23316,11 @@ has-background-danger.is-hoverable:active {
 
 body {
   background-color: #fff;
+  color: #565656;
+}
+
+strong {
+  color: #444;
 }
 
 .borderBlue {
@@ -23327,6 +23332,37 @@ body {
 
 .roundedFull {
   border-radius: 50em;
+}
+
+.navbar-dropdown {
+  background-color: #e5e5e5;
+  border-radius: 6px;
+}
+.navbar-dropdown a {
+  color: #444444;
+}
+.navbar-dropdown a.navbar-item {
+  color: #444444;
+}
+
+.navbar-brand {
+  background-color: #fff;
+}
+
+.navbar-brand .navbar-item svg {
+  max-height: 90px;
+}
+
+.navbar-end .navbar-item {
+  color: #565656;
+}
+
+.top-nav {
+  padding: 1rem;
+}
+
+.navbar-item img {
+  max-height: 48px;
 }
 
 .entry-header {
@@ -23344,38 +23380,17 @@ body {
 }
 .entry-header p {
   font-weight: 400;
+  color: #fff;
 }
 .entry-header .navbar-item {
   font-weight: 600;
+  color: #fff;
 }
 .entry-header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-}
-
-.navbar-dropdown {
-  background-color: #e5e5e5;
-  border-radius: 6px;
-}
-.navbar-dropdown a {
-  color: #444444;
-}
-.navbar-dropdown a.navbar-item {
-  color: #444444;
-}
-
-.navbar-brand .navbar-item svg {
-  max-height: 90px;
-}
-
-.top-nav {
-  padding: 1rem;
-}
-
-.navbar-item img {
-  max-height: 48px;
 }
 
 .sidebar-item {
@@ -23390,6 +23405,7 @@ body {
 }
 .sidebar-item p {
   font-size: 14px;
+  color: #5d5d5d;
 }
 .sidebar-item a {
   text-align: center;
@@ -23415,6 +23431,11 @@ a.textBlue {
   color: #444444;
   font-weight: bold;
   font-size: 28px;
+}
+
+h2,
+h2.title {
+  color: #444;
 }
 
 h3 {
@@ -23576,6 +23597,7 @@ input[type=number] {
 
 .radio-group p {
   margin: 20px auto;
+  color: #565656;
 }
 
 .radio-group label {
@@ -23663,7 +23685,8 @@ ul.moom-bullets li::before {
 }
 .content-area .title,
 .sidebar-area .title {
-  margin-bottom: 2rem;
+  margin-bottom: 5px;
+  color: #444;
 }
 .content-area img,
 .sidebar-area img {
@@ -23718,6 +23741,7 @@ ul.moom-bullets li::before {
   margin-bottom: 20px;
   display: inline-block;
   border-radius: 3px;
+  font-size: 32px;
 }
 
 .moreInfo {
@@ -23798,6 +23822,7 @@ ul.moom-bullets li::before {
 .container table {
   margin: 30px 0;
   border-collapse: separate;
+  color: #5d5d5d;
 }
 
 .comparison-table,
@@ -23827,6 +23852,7 @@ ul.moom-bullets li::before {
 
 .is-small {
   font-size: 8px;
+  color: #5d5d5d;
 }
 
 .sidebar-icon {
@@ -23871,6 +23897,9 @@ ul.moom-bullets li::before {
     padding: 1.5rem 1rem;
   }
 }
+.comparison-table th {
+  color: #444;
+}
 .comparison-table th:nth-child(2n) {
   /* box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15); */
 }
@@ -23886,6 +23915,7 @@ ul.moom-bullets li::before {
 .navbar-menu {
   display: flex;
   flex-wrap: wrap;
+  background-color: #fff;
   /* Hide the items after the first three by default on larger screens */
   /* Media query for small screens */
 }
@@ -23905,6 +23935,7 @@ ul.moom-bullets li::before {
 }
 .navbar-menu .navbar-item {
   display: inline-block;
+  background-color: #fff;
 }
 .navbar-menu .navbar-item:nth-child(n+4) {
   display: none;
@@ -23981,6 +24012,7 @@ ul.moom-bullets li::before {
 
 .navbar-two .navbar-dropdown.is-boxed a {
   color: #444444;
+  font-weight: 600;
 }
 
 /* Media query for large screens */
@@ -24015,28 +24047,29 @@ ul.moom-bullets li::before {
   position: relative;
 }
 
-/* Styles for .dropdownButton to maintain its size and prevent text wrapping */
 .dropdownButton {
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide any overflow text */
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: none;
-  display: inline-block; /* Ensure it behaves like a button */
-  padding: 0.5rem 0.75rem; /* Add some padding for button look */
-  font-size: 1rem; /* Ensure consistent font size */
-  height: auto; /* Allow the button to adjust height based on content */
-  max-width: 200px; /* Optional: set a maximum width to constrain button size */
-  vertical-align: middle; /* Align button vertically in line with text */
-  text-align: center; /* Center the text within the button */
-  box-sizing: border-box; /* Include padding and border in the element's width and height */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  border: 1px solid #ddd; /* Add a border to match button styling */
-  border-radius: 6px; /* Match the rounded corners style */
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  height: auto;
+  max-width: 200px;
+  vertical-align: middle;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 12px;
 }
 
 /* Make sure the button remains consistent across different screen sizes */
 @media screen and (max-width: 1024px) {
   .dropdownButton {
-    min-width: 100px; /* Adjust minimum width for smaller screens */
+    min-width: 100px;
   }
 }
 /* Ensure the dropdown-menu aligns properly with the button */
@@ -24080,6 +24113,7 @@ ul.moom-bullets li::before {
 .footer-widgets .sidebar-item p {
   font-size: 14px;
   min-height: 44px;
+  color: #5d5d5d;
 }
 
 .footer-widgets .sidebar-item h3 {
