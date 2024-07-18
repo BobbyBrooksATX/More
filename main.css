@@ -23314,6 +23314,10 @@ has-background-danger.is-hoverable:active {
   --bluedark: $bluedark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding: 20px;
 }
