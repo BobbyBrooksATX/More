@@ -23314,6 +23314,10 @@ has-background-danger.is-hoverable:active {
   --bluedark: $bluedark;
 }
 
+.section {
+  padding: 20px;
+}
+
 body {
   background-color: #fff;
   color: #565656;
@@ -23411,6 +23415,10 @@ strong {
   text-align: center;
   margin: 10px auto;
   display: table;
+}
+
+.sidebar-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .button.white {
@@ -23858,6 +23866,39 @@ ul.moom-bullets li::before {
 .sidebar-icon {
   display: table;
   margin: 0 auto;
+  width: 100%;
+  max-width: 60px;
+}
+
+.iconGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  min-height: 100px;
+}
+.iconGroup .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+}
+.iconGroup .icon img {
+  max-width: 60px;
+  height: auto;
+}
+.iconGroup .icon span {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
 }
 
 .disclaimer {
@@ -24108,6 +24149,10 @@ ul.moom-bullets li::before {
   background-color: hsl(221, 14%, 95%);
   outline: none; /* Remove default outline */
   color: #444;
+}
+
+.footer-widgets .sidebar-item {
+  margin-bottom: 0;
 }
 
 .footer-widgets .sidebar-item p {
