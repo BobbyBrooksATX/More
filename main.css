@@ -23321,6 +23321,11 @@ html {
 .section {
   padding: 20px;
 }
+@media (min-width: 768px) {
+  .section {
+    padding: 40px;
+  }
+}
 
 body {
   background-color: #fff;
@@ -23558,6 +23563,10 @@ h5 {
   margin: 10px;
 }
 
+a.button.iconButton {
+  margin: 0 auto;
+}
+
 .button.iconButton {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -23782,10 +23791,10 @@ ul.moom-bullets li::before {
 }
 
 .button {
-  white-space: normal; /* Allows the text to wrap */
-  word-wrap: break-word; /* Breaks long words */
-  overflow: hidden; /* Prevents overflowing */
-  display: inline-block; /* Ensures button respects its container's width */
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: inline-block;
 }
 .button.moom {
   background-color: #105fa8;
@@ -23899,7 +23908,6 @@ ul.moom-bullets li::before {
   margin-top: 8px;
   margin-bottom: 8px;
   overflow: hidden;
-  text-overflow: ellipsis;
   width: 100%;
   min-height: 40px;
   text-align: center;
@@ -23999,13 +24007,10 @@ ul.moom-bullets li::before {
   }
   .navbar-menu.is-active {
     /* Show the first two items side by side */
-    /* Create a flex container for the first two items to center them */
-    /* Center the first two items together */
-    /* Center and stack items from the third onwards */
   }
   .navbar-menu.is-active .navbar-item {
     display: block;
-    width: 100%; /* Ensure full width for centering */
+    width: 100%;
     text-align: center;
     opacity: 0;
     transform: translateY(10px);
@@ -24013,9 +24018,9 @@ ul.moom-bullets li::before {
   }
   .navbar-menu.is-active .navbar-item:nth-child(1),
   .navbar-menu.is-active .navbar-item:nth-child(2) {
-    width: auto; /* Allow them to be side by side */
+    width: auto;
     margin-right: 0rem;
-    text-align: center; /* Align text to the left */
+    text-align: center;
     opacity: 1;
     transform: translateY(0);
   }
@@ -24023,7 +24028,7 @@ ul.moom-bullets li::before {
   .navbar-menu.is-active .navbar-menu.is-active .navbar-item:nth-child(2)::after {
     content: "";
     display: inline-block;
-    width: 50%; /* Ensure equal space to center */
+    width: 50%;
   }
   .navbar-menu.is-active .navbar-menu.is-active .navbar-item:nth-child(1)::before,
   .navbar-menu.is-active .navbar-menu.is-active .navbar-item:nth-child(2)::before {
@@ -24050,9 +24055,8 @@ ul.moom-bullets li::before {
     transform: translateY(0);
   }
 }
-/* General visibility for .navbar-two */
 .navbar-two {
-  display: none; /* Hide by default */
+  display: none;
 }
 
 .navbar-two .navbar-dropdown.is-boxed a {
@@ -24063,19 +24067,18 @@ ul.moom-bullets li::before {
 /* Media query for large screens */
 @media screen and (min-width: 1025px) {
   .navbar-two {
-    display: flex; /* Show .navbar-two on large screens */
-    flex-direction: row; /* Align items horizontally */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .entry-title p {
     max-width: 75%;
   }
 }
-/* General styles for .navbar-dropdown-menu */
 /* Show dropdown when it has the .is-active class */
 .navbar-dropdown-menu.is-active {
-  display: block; /* Display dropdown when active */
+  display: block;
 }
 
 /* Highlight dropdown item on hover or focus */
@@ -24083,9 +24086,9 @@ ul.moom-bullets li::before {
   padding: 10px;
 }
 .navbar-dropdown-menu a.navbar-item:hover, .navbar-dropdown-menu a.navbar-item:focus {
-  background-color: #363636; /* dark gray (graydarker) */
-  color: #fff; /* white text */
-  outline: none; /* Remove default outline */
+  background-color: #444444;
+  color: #fff;
+  outline: none;
 }
 
 .relativeDropdown {
@@ -24117,26 +24120,25 @@ ul.moom-bullets li::before {
     min-width: 100px;
   }
 }
-/* Ensure the dropdown-menu aligns properly with the button */
 .navbar-dropdown-menu {
-  left: 0; /* Align with the left edge of the button */
-  top: 100%; /* Position below the button */
+  left: 0;
+  top: 100%;
 }
 
 /* General styles for .navbar-dropdown-menu */
 .navbar-dropdown-menu {
   background-color: #e5e5e5;
-  border-radius: 6px; /* Rounded corners */
-  min-width: auto; /* No minimum width constraint */
-  max-width: 200px; /* Optional: Set a maximum width for the dropdown */
-  position: absolute; /* Absolute positioning */
-  z-index: 1000; /* Ensure it appears above other elements */
-  margin-top: 0.5rem; /* Space between the button and the dropdown */
-  display: none; /* Initially hide the dropdown */
-  left: 0; /* Align with the left of the parent */
-  top: 100%; /* Position below the button */
-  transform: translateX(0); /* No horizontal shift */
-  width: auto; /* Automatically adjust to content width */
+  border-radius: 6px;
+  min-width: auto;
+  max-width: 200px;
+  position: absolute;
+  z-index: 1000;
+  margin-top: 0.5rem;
+  display: none;
+  left: 0;
+  top: 100%;
+  transform: translateX(0);
+  width: auto;
 }
 
 /* Show dropdown when it has the .is-active class */
@@ -24151,8 +24153,8 @@ ul.moom-bullets li::before {
 }
 .navbar-dropdown-menu a.navbar-item:hover, .navbar-dropdown-menu a.navbar-item:focus {
   background-color: hsl(221, 14%, 95%);
-  outline: none; /* Remove default outline */
-  color: #444;
+  outline: none;
+  color: #444444;
 }
 
 .footer-widgets .sidebar-item {
