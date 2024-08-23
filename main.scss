@@ -582,6 +582,9 @@ ul.moom-bullets li::before {
 .gold {
   color: $gold;
 }
+.tealDark {
+  color: $tealdark;
+}
 
 .bullet {
   margin-right: 10px;
@@ -919,4 +922,42 @@ ul.moom-bullets li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Payment Break Down Styles */
+.bar {
+  display: flex;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.segment {
+  height: 100%;
+}
+
+.principal-interest {
+  background-color: $bluedark;
+  width: 60%; /* Adjust width according to actual values */
+}
+
+.property-tax {
+  background-color: $tealdark;
+  width: 20%; /* Adjust width according to actual values */
+}
+
+.home-insurance {
+  background-color: $gold;
+  width: 10%; /* Adjust width according to actual values */
+}
+
+.hoa-fees {
+  background-color: $blue;
+  width: 5%; /* Adjust width according to actual values */
+}
+
+.mortgage-insurance {
+  background-color: $graydark;
+  width: 5%; /* Adjust width according to actual values */
 }

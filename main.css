@@ -23832,6 +23832,10 @@ ul.moom-bullets li::before {
   color: #f5b93c;
 }
 
+.tealDark {
+  color: #03746e;
+}
+
 .bullet {
   margin-right: 10px;
 }
@@ -24188,6 +24192,44 @@ ul.moom-bullets li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Payment Break Down Styles */
+.bar {
+  display: flex;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.segment {
+  height: 100%;
+}
+
+.principal-interest {
+  background-color: #003a70;
+  width: 60%; /* Adjust width according to actual values */
+}
+
+.property-tax {
+  background-color: #03746e;
+  width: 20%; /* Adjust width according to actual values */
+}
+
+.home-insurance {
+  background-color: #f5b93c;
+  width: 10%; /* Adjust width according to actual values */
+}
+
+.hoa-fees {
+  background-color: #105fa8;
+  width: 5%; /* Adjust width according to actual values */
+}
+
+.mortgage-insurance {
+  background-color: #5d5d5d;
+  width: 5%; /* Adjust width according to actual values */
 }
 
 /*# sourceMappingURL=main.css.map */
