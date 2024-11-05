@@ -23508,6 +23508,7 @@ h5 {
   text-align: center;
 }
 
+.moomMessage textarea,
 .moomModal input {
   background-color: #fff;
   margin: 20px auto 10px;
@@ -23523,6 +23524,11 @@ h5 {
   display: block;
 }
 
+.moomMessage textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
 .edit .moomModal input {
   margin: 5px auto 20px;
 }
@@ -23530,6 +23536,10 @@ h5 {
 .moomModal button {
   padding: 12px 180px;
   margin-top: 20px;
+}
+
+.moomMessage label {
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -23541,9 +23551,34 @@ h5 {
     padding: 12px 0;
   }
 }
+.moomMessage textarea,
 .edit .moomModal input {
   background-color: #f5f5f5;
   color: #000;
+}
+
+.moomMessage {
+  width: 100%;
+  max-width: 600px;
+}
+
+.moomMessage textarea,
+.moomMessage input,
+.moomMessage h2 {
+  text-align: left !important;
+  padding: 5px 10px;
+}
+
+.moomMessage label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.edit .moomModal.moomMessage input,
+.moomMessage textarea {
+  margin: 0;
 }
 
 .editButtonGroup {
@@ -23555,6 +23590,11 @@ h5 {
   align-content: center;
   gap: 10px;
   margin: 0 auto;
+}
+
+.edit .moomModal.moomMessage .editButtonGroup {
+  margin: 0;
+  margin-top: 20px;
 }
 
 .editButtonGroup button {
